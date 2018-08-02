@@ -1,4 +1,4 @@
-package demo;
+package com.altruhelp.test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -15,7 +15,7 @@ public class SignupTest
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//a[@href='/register/invitation']")).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("chinmayeegiri+1@gmail.com");
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("chinmayeegiri+5@gmail.com");
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
@@ -59,6 +59,12 @@ public class SignupTest
 		driver.findElement(By.name("linkedIn")).sendKeys("https://www.linkedin.com/in/chinmayee-giri-21624b62/");
 		driver.findElement(By.name("agreedToTerms")).click();
 		driver.findElement(By.name("submit")).click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);		
+		driver.findElement(By.xpath("//a[@onclick='stopGuider()']")).click();
+		
+		InviteFriendTest newInvite=new InviteFriendTest();
+		newInvite.invite(driver);
 //	driver.close();
+		
 }
 }
