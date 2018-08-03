@@ -1,8 +1,6 @@
 package com.altruhelp.test;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 public class InviteFriendTest {
 	public void invite(WebDriver driver){
 		driver.findElement(By.xpath("//input[@value='Invite A Friend']")).click();
